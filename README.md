@@ -147,7 +147,6 @@ The scheduler supports:
 * ready/blocked task states
 * periodic task execution
 * context switching
-* stack frame management
 * software-managed PSP stacks
 
 ---
@@ -161,15 +160,6 @@ The firmware directly utilizes Cortex-M4 exception mechanisms including:
 * HardFault
 * MemManage
 * BusFault
-
-The project manually manages:
-
-* interrupt vector tables
-* exception handlers
-* stack initialization
-* processor fault handling
-
-without middleware abstraction layers.
 
 ---
 
@@ -196,9 +186,6 @@ The project demonstrates advanced low-level embedded engineering concepts includ
 
 * ARM Cortex-M4 architecture
 * bare-metal firmware development
-* startup code implementation
-* linker script memory mapping
-* stack pointer initialization
 * MSP/PSP management
 * context switching
 * interrupt handling
@@ -219,16 +206,12 @@ The project demonstrates advanced low-level embedded engineering concepts includ
 
 ## Hardware
 
-* STM32 Nucleo-32
 * STM32F303K8 MCU
 * MPU9250 Motion Sensor
 
 ## Toolchain
 
-* arm-none-eabi-gcc
-* OpenOCD
 * STM32CubeIDE
-* GNU Make
 * PuTTY / Serial Terminal
 
 ---
@@ -244,4 +227,3 @@ This project is intended to simulate the architecture of real industrial low-pow
 * power-aware embedded design
 * industrial firmware reliability techniques
 
-The implementation emphasizes software architecture quality, low-level debugging skills, and deep understanding of embedded system internals beyond standard HAL-based application development.
